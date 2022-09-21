@@ -62,4 +62,11 @@
   .adv-card:is(:first-child, :nth-child(2)) {
     margin-bottom: 20px;
   }
+  .adv-card__head {
+    flex-direction: row;
+    align-items: center;
+  }
+  .adv-card__title {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

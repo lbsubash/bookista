@@ -50,5 +50,14 @@
     &:is(:first-child, :nth-child(2)) {
       margin-bottom: 20px;
     }
+
+    &__head {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
   }
 }
