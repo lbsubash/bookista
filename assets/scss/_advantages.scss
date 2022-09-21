@@ -11,31 +11,31 @@
 .adv-card {
   text-align: left;
   flex-basis: 22%;
-}
 
-.adv-card__head {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 20px;
-}
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 
-.adv-card__icon-container {
-  font-size: 30px;
-  color: variables.$clr-pri-dark;
-  padding: 8px;
-  border-radius: 5px;
-  background: variables.$clr-sec-yellow-subtle;
-}
+  &__icon-container {
+    font-size: 30px;
+    color: variables.$clr-pri-dark;
+    padding: 8px;
+    border-radius: 5px;
+    background: variables.$clr-sec-yellow-subtle;
+  }
 
-.adv-card__title {
-  @include variables.f-heading-6;
-}
+  &__title {
+    @include variables.f-heading-6;
+  }
 
-.adv-card__desc {
-  @include variables.f-body-small;
-  color: variables.$clr-gray-dark;
+  &__desc {
+    @include variables.f-body-small;
+    color: variables.$clr-gray-dark;
+  }
 }
 
 @media (max-width: variables.$br-mobile) {
