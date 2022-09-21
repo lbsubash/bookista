@@ -4,7 +4,8 @@
   background-color: variables.$clr-pri-bg-light;
   justify-content: space-between;
   gap: 4%;
-  padding: 20px 100px;
+  padding-block: 20px;
+  padding-inline: variables.$p-desktop;
 }
 
 .adv-card {
@@ -39,7 +40,7 @@
 
 @media (max-width: variables.$br-mobile) {
   .advantages {
-    padding-inline: 30px;
+    padding-inline: variables.$p-mobile;
     gap: 2%;
   }
 

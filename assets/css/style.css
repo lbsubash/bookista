@@ -13,7 +13,8 @@
   background-color: #fdf8fe;
   justify-content: space-between;
   gap: 4%;
-  padding: 20px 100px;
+  padding-block: 20px;
+  padding-inline: 100px;
 }
 
 .adv-card {
