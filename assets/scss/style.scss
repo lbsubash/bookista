@@ -1,6 +1,3 @@
 @use "variables";
 @import "resets";
-
-h1 {
-  @include variables.f-body-normal;
-}
+@import "advantages";

@@ -59,27 +59,27 @@ $ff-secondary: "Inter", sans-serif;
   font-size: 22px;
 }
 
-@mixin f-body-large {
+@mixin f-body-large($weight: 400) {
   font-family: $ff-secondary;
-  font-weight: 400;
+  font-weight: $weight;
   font-size: 20px;
 }
 
-@mixin f-body-medium {
+@mixin f-body-medium($weight: 400) {
   font-family: $ff-secondary;
-  font-weight: 400;
+  font-weight: $weight;
   font-size: 18px;
 }
 
-@mixin f-body-normal {
+@mixin f-body-normal($weight: 400) {
   font-family: $ff-secondary;
-  font-weight: 400;
+  font-weight: $weight;
   font-size: 16px;
 }
 
-@mixin f-body-small {
+@mixin f-body-small($weight: 400) {
   font-family: $ff-secondary;
-  font-weight: 400;
+  font-weight: $weight;
   font-size: 14px;
 }
 
@@ -89,7 +89,8 @@ $ff-secondary: "Inter", sans-serif;
 // primary colors
 $clr-pri-dark: #3b2f4a;
 $clr-pri-light: #6a5c7c;
-$clr-pri-dark: #9280a8;
+$clr-pri-subtle: #9280a8;
+$clr-pri-bg-light: #fdf8fe;
 // secondary colors
 $clr-sec-pink-dark: #d9176c;
 $clr-sec-pink-light: #ff70af;
@@ -103,3 +104,9 @@ $clr-black: #000000;
 $clr-gray-dark: #a4a4a4;
 $clr-gray-light: #c4c4c4;
 $clr-white: #ffffff;
+
+//
+// * Breakpoints
+//
+
+$br-mobile: 550px;

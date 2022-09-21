@@ -1,16 +1,7 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .advantages {
   display: flex;
   flex-wrap: wrap;
-  background-color: #fdf8fe;
+  background-color: variables.$clr-pri-bg-light;
   justify-content: space-between;
   gap: 4%;
   padding: 20px 100px;
@@ -31,34 +22,32 @@
 
 .adv-card__icon-container {
   font-size: 30px;
-  color: #3b2f4a;
+  color: variables.$clr-pri-dark;
   padding: 8px;
   border-radius: 5px;
-  background: #ffe0ba;
+  background: variables.$clr-sec-yellow-subtle;
 }
 
 .adv-card__title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
+  @include variables.f-heading-6;
 }
 
 .adv-card__desc {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #a4a4a4;
+  @include variables.f-body-small;
+  color: variables.$clr-gray-dark;
 }
 
-@media (max-width: 550px) {
+@media (max-width: variables.$br-mobile) {
   .advantages {
     padding-inline: 30px;
     gap: 2%;
   }
+
   .adv-card {
     flex-basis: 48%;
+
+    &:is(:first-child, :nth-child(2)) {
+      margin-bottom: 20px;
+    }
   }
-  .adv-card:is(:first-child, :nth-child(2)) {
-    margin-bottom: 20px;
-  }
-}/*# sourceMappingURL=style.css.map */
+}
