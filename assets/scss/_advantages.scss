@@ -1,11 +1,11 @@
 .advantages {
   display: flex;
   flex-wrap: wrap;
-  background-color: variables.$clr-pri-bg-light;
+  background-color: $clr-pri-bg-light;
   justify-content: space-between;
   gap: 4%;
   padding-block: 20px;
-  padding-inline: variables.$p-desktop;
+  padding-inline: $p-desktop;
 }
 
 .adv-card {
@@ -22,25 +22,25 @@
 
   &__icon-container {
     font-size: 30px;
-    color: variables.$clr-pri-dark;
+    color: $clr-pri-dark;
     padding: 8px;
     border-radius: 5px;
-    background: variables.$clr-sec-yellow-subtle;
+    background: $clr-sec-yellow-subtle;
   }
 
   &__title {
-    @include variables.f-heading-6;
+    @include f-heading-6;
   }
 
   &__desc {
-    @include variables.f-body-small;
-    color: variables.$clr-gray-dark;
+    @include f-body-small;
+    color: $clr-gray-dark;
   }
 }
 
-@media (max-width: variables.$br-mobile) {
+@media (max-width: $br-mobile) {
   .advantages {
-    padding-inline: variables.$p-mobile;
+    padding-inline: $p-mobile;
     gap: 2%;
   }
 
