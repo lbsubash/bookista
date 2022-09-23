@@ -1,3 +1,38 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo__icon {
+  font-size: 36px;
+  color: #3b2f4a;
+}
+.logo__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.logo__title--yellow {
+  color: #eaa451;
+}
+.logo__slogan {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 10px;
+  color: #3b2f4a;
+  line-height: 1.1;
+}
+.logo__desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6a5c7c;
+  font-size: 12px;
+  margin-block: 20px;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -64,5 +99,94 @@
   }
   .adv-card__title {
     font-size: 14px;
+  }
+}
+.footer {
+  padding-block: 20px;
+  padding-inline: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo__container,
+.f-links {
+  flex-basis: 25%;
+}
+
+.f-links:last-child {
+  margin-top: -80px;
+}
+.f-links__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+}
+.f-links__container, .f-links__links {
+  margin-block: 15px;
+  color: #3b2f4a;
+  font-size: 14px;
+}
+.f-links__container--icon {
+  display: flex;
+  gap: 10px;
+}
+.f-links__links {
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.f-links__links--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: #d9176c;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d9176c;
+}
+.f-links__links--icon.icon-active {
+  color: #ffffff;
+  background-color: #d9176c;
+}
+.f-links__links--container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.f-links__links--container i {
+  color: #d9176c;
+}
+
+@media (max-width: 550px) {
+  .footer {
+    padding-inline: 30px;
+  }
+  .logo__container,
+.f-links:is(:last-child, :nth-child(4)) {
+    flex-basis: 100%;
+  }
+  .logo__container {
+    order: 1;
+  }
+  .f-links:nth-child(4) {
+    order: 2;
+  }
+  .f-links:nth-child(2) {
+    order: 3;
+    flex-basis: 50%;
+  }
+  .f-links:nth-child(3) {
+    order: 4;
+    flex-basis: 50%;
+  }
+  .f-links:last-child {
+    margin-top: auto;
+    order: 5;
   }
 }/*# sourceMappingURL=style.css.map */

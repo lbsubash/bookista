@@ -1,0 +1,102 @@
+.footer {
+  padding-block: 20px;
+  padding-inline: $p-desktop;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo__container,
+.f-links {
+  flex-basis: 25%;
+}
+
+.f-links {
+  &:last-child {
+    margin-top: -80px;
+  }
+
+  &__title {
+    @include f-heading-6;
+    color: $clr-black;
+  }
+
+  &__container,
+  &__links {
+    margin-block: 15px;
+    color: $clr-pri-dark;
+    font-size: 14px;
+  }
+
+  &__container--icon {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__links {
+    list-style: none;
+    @include f-body-small;
+
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      color: $clr-sec-pink-dark;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $clr-sec-pink-dark;
+
+      &.icon-active {
+        color: $clr-white;
+        background-color: $clr-sec-pink-dark;
+      }
+    }
+
+    &--container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+
+      & i {
+        color: $clr-sec-pink-dark;
+      }
+    }
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .footer {
+    padding-inline: $p-mobile;
+  }
+
+  .logo__container,
+  .f-links:is(:last-child, :nth-child(4)) {
+    flex-basis: 100%;
+  }
+  .logo__container {
+    order: 1;
+  }
+
+  //   ? Why :nth-child() is behaving wierdly?
+
+  .f-links:nth-child(4) {
+    order: 2;
+  }
+  .f-links:nth-child(2) {
+    order: 3;
+    flex-basis: 50%;
+  }
+
+  .f-links:nth-child(3) {
+    order: 4;
+    flex-basis: 50%;
+  }
+
+  .f-links:last-child {
+    margin-top: auto;
+    order: 5;
+  }
+}

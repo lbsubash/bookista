@@ -1,0 +1,34 @@
+// Logo
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__icon {
+    font-size: 36px;
+    color: $clr-pri-dark;
+  }
+
+  &__title {
+    @include f-heading-5;
+    text-transform: uppercase;
+
+    &--yellow {
+      color: $clr-sec-yellow-dark;
+    }
+  }
+
+  &__slogan {
+    @include f-body-small;
+    font-size: 10px;
+    color: $clr-pri-dark;
+    line-height: 1.1;
+  }
+
+  &__desc {
+    @include f-body-small;
+    color: $clr-pri-light;
+    font-size: 12px;
+    margin-block: 20px;
+  }
+}
