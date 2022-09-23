@@ -37,14 +37,13 @@
 @media (max-width: $br-mobile) {
   .subscribe {
     padding-inline: $p-mobile;
-    padding-block: 30px;
+    padding-block: 50px;
     flex-direction: column;
     gap: 30px;
 
     &__search-bar {
       width: 100%;
       text-align: center;
-      margin-bottom: 30px;
     }
 
     &__search-input {

@@ -1,0 +1,136 @@
+.testimonial {
+  position: relative;
+  padding-inline: $p-desktop;
+  background-color: $clr-pri-bg-light;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 100px;
+
+  &__left {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    padding-block-start: 30px;
+  }
+
+  &__title {
+    @include f-heading-3;
+  }
+
+  &__desc {
+    @include f-body-small($weight: 600);
+    color: $clr-gray-dark;
+    font-size: 12px;
+  }
+
+  &__right {
+    position: relative;
+    flex-basis: 30%;
+    background: $clr-white;
+    text-align: center;
+    padding: 20px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba($color: $clr-pri-subtle, $alpha: 0.7);
+    z-index: 1;
+  }
+
+  &__right::after,
+  &__right::before {
+    content: "";
+    position: absolute;
+    right: -25px;
+    width: 30px;
+    height: 150px;
+    border-radius: 5px;
+    z-index: -1;
+    background-color: $clr-white;
+    box-shadow: 10px 5px 10px 3px rgba($color: $clr-pri-subtle, $alpha: 0.7);
+  }
+
+  &__right::before {
+    left: -25px;
+    width: 30px;
+    box-shadow: -10px 5px 10px 3px rgba($color: $clr-pri-subtle, $alpha: 0.7);
+  }
+
+  &__user-text {
+    @include f-heading-6;
+    font-size: 12px;
+  }
+
+  &__user-name {
+    margin-bottom: -20px;
+    @include f-heading-6;
+    font-size: 12px;
+
+    & span {
+      font-size: 10px;
+      color: $clr-gray-dark;
+    }
+  }
+
+  &__star {
+    color: #ff7b00;
+  }
+
+  &__star--null {
+    color: $clr-gray-light;
+  }
+
+  &__avatar-container {
+    display: flex;
+  }
+
+  &__user-icon-container {
+    margin-bottom: -40px;
+  }
+
+  &__avatar-icon {
+    position: relative;
+    margin-inline-end: -15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: 0.25s ease;
+
+    &--user {
+      width: 80px;
+      height: 80px;
+      box-shadow: 0px 10px 10px rgba($color: $clr-pri-subtle, $alpha: 0.9);
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      z-index: 0;
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $clr-white;
+      background-color: $clr-sec-pink-dark;
+      @include f-heading-6;
+    }
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .testimonial {
+    padding-inline: $p-mobile + 30px;
+    flex-direction: column;
+    gap: 30px;
+
+    &__left {
+      text-align: center;
+      align-items: center;
+    }
+  }
+}

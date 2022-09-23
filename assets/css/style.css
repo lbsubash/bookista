@@ -115,6 +115,135 @@
     font-size: 14px;
   }
 }
+.testimonial {
+  position: relative;
+  padding-inline: 100px;
+  background-color: #fdf8fe;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 100px;
+}
+.testimonial__left {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  -webkit-padding-before: 30px;
+          padding-block-start: 30px;
+}
+.testimonial__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+.testimonial__desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #a4a4a4;
+  font-size: 12px;
+}
+.testimonial__right {
+  position: relative;
+  flex-basis: 30%;
+  background: #ffffff;
+  text-align: center;
+  padding: 20px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(146, 128, 168, 0.7);
+  z-index: 1;
+}
+.testimonial__right::after, .testimonial__right::before {
+  content: "";
+  position: absolute;
+  right: -25px;
+  width: 30px;
+  height: 150px;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: #ffffff;
+  box-shadow: 10px 5px 10px 3px rgba(146, 128, 168, 0.7);
+}
+.testimonial__right::before {
+  left: -25px;
+  width: 30px;
+  box-shadow: -10px 5px 10px 3px rgba(146, 128, 168, 0.7);
+}
+.testimonial__user-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 12px;
+}
+.testimonial__user-name {
+  margin-bottom: -20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 12px;
+}
+.testimonial__user-name span {
+  font-size: 10px;
+  color: #a4a4a4;
+}
+.testimonial__star {
+  color: #ff7b00;
+}
+.testimonial__star--null {
+  color: #c4c4c4;
+}
+.testimonial__avatar-container {
+  display: flex;
+}
+.testimonial__user-icon-container {
+  margin-bottom: -40px;
+}
+.testimonial__avatar-icon {
+  position: relative;
+  -webkit-margin-end: -15px;
+          margin-inline-end: -15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid white;
+  transition: 0.25s ease;
+}
+.testimonial__avatar-icon--user {
+  width: 80px;
+  height: 80px;
+  box-shadow: 0px 10px 10px rgba(146, 128, 168, 0.9);
+}
+.testimonial__avatar-icon:hover {
+  transform: translateY(-5px);
+  z-index: 0;
+}
+.testimonial__avatar-icon--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #d9176c;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@media (max-width: 550px) {
+  .testimonial {
+    padding-inline: 60px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .testimonial__left {
+    text-align: center;
+    align-items: center;
+  }
+}
 .subscribe {
   background-color: #3b2f4a;
   padding-inline: 100px;
@@ -151,14 +280,13 @@
 @media (max-width: 550px) {
   .subscribe {
     padding-inline: 30px;
-    padding-block: 30px;
+    padding-block: 50px;
     flex-direction: column;
     gap: 30px;
   }
   .subscribe__search-bar {
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
   }
   .subscribe__search-input {
     width: 100%;
