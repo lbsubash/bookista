@@ -33,6 +33,20 @@
   margin-block: 20px;
 }
 
+.btn, .yellow-btn, .subscribe__btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.yellow-btn, .subscribe__btn {
+  background-color: #eaa451;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -101,6 +115,56 @@
     font-size: 14px;
   }
 }
+.subscribe {
+  background-color: #3b2f4a;
+  padding-inline: 100px;
+  padding-block: 80px;
+  color: #ffffff;
+  background-color: #3b2f4a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.subscribe__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  flex-basis: 22%;
+}
+.subscribe__search-input {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 400px;
+  border: 1px solid #a4a4a4;
+  height: 45px;
+}
+.subscribe__btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: -8px;
+}
+
+@media (max-width: 550px) {
+  .subscribe {
+    padding-inline: 30px;
+    padding-block: 30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .subscribe__search-bar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .subscribe__search-input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
 .footer {
   padding-block: 20px;
   padding-inline: 100px;
@@ -137,8 +201,10 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  cursor: pointer;
 }
 .f-links__links--icon {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

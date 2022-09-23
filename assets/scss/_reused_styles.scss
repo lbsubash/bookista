@@ -32,3 +32,16 @@
     margin-block: 20px;
   }
 }
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.yellow-btn {
+  @extend .btn;
+  background-color: $clr-sec-yellow-dark;
+  color: $clr-white;
+  @include f-heading-6;
+}

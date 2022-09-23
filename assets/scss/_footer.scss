@@ -36,8 +36,10 @@
   &__links {
     list-style: none;
     @include f-body-small;
+    cursor: pointer;
 
     &--icon {
+      cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;

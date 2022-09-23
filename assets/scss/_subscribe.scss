@@ -1,0 +1,55 @@
+.subscribe {
+  background-color: $clr-pri-dark;
+  //   background-image: url(../images/bg.svg);
+  padding-inline: $p-desktop;
+  padding-block: 80px;
+  color: $clr-white;
+  background-color: #3b2f4a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__title {
+    @include f-heading-4;
+    flex-basis: 22%;
+  }
+
+  &__search-input {
+    background-color: transparent;
+    color: $clr-white;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 400px;
+    border: 1px solid $clr-gray-dark;
+    height: 45px;
+  }
+
+  &__btn {
+    @extend .yellow-btn;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: -8px;
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .subscribe {
+    padding-inline: $p-mobile;
+    padding-block: 30px;
+    flex-direction: column;
+    gap: 30px;
+
+    &__search-bar {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__search-input {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
