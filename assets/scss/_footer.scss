@@ -30,6 +30,7 @@
   &__container--icon {
     display: flex;
     gap: 10px;
+    color: $clr-pri-dark;
   }
 
   &__links {
@@ -67,9 +68,28 @@
   }
 }
 
+// Copyright
+
+.copyright {
+  padding-inline: $p-desktop;
+  border-top: 1px solid $clr-gray-light;
+  &__text {
+    @include f-body-small($weight: 600);
+    font-size: 12px;
+    color: $clr-gray-dark;
+    padding-block: 20px;
+  }
+}
+
 @media (max-width: $br-mobile) {
-  .footer {
+  .footer,
+  .copyright {
     padding-inline: $p-mobile;
+  }
+
+  .copyright {
+    border: none;
+    text-align: center;
   }
 
   .logo__container,
