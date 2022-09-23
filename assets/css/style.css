@@ -1,3 +1,12 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -45,15 +54,6 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 16px;
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .advantages {
@@ -116,7 +116,6 @@
   }
 }
 .testimonial {
-  position: relative;
   padding-inline: 100px;
   background-color: #fdf8fe;
   display: flex;
@@ -156,23 +155,18 @@
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0px 10px 10px rgba(146, 128, 168, 0.7);
-  z-index: 1;
 }
-.testimonial__right::after, .testimonial__right::before {
-  content: "";
+.testimonial__right::before {
   position: absolute;
-  right: -25px;
-  width: 30px;
-  height: 150px;
+  content: "";
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 70%;
   border-radius: 5px;
   z-index: -1;
   background-color: #ffffff;
-  box-shadow: 10px 5px 10px 3px rgba(146, 128, 168, 0.7);
-}
-.testimonial__right::before {
-  left: -25px;
-  width: 30px;
-  box-shadow: -10px 5px 10px 3px rgba(146, 128, 168, 0.7);
+  box-shadow: 0px 5px 10px 3px rgba(146, 128, 168, 0.7);
 }
 .testimonial__user-text {
   font-family: "Poppins", sans-serif;

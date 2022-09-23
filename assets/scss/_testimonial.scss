@@ -1,5 +1,4 @@
 .testimonial {
-  position: relative;
   padding-inline: $p-desktop;
   background-color: $clr-pri-bg-light;
   display: flex;
@@ -37,26 +36,23 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0px 10px 10px rgba($color: $clr-pri-subtle, $alpha: 0.7);
-    z-index: 1;
   }
-
-  &__right::after,
+  //
+  //
+  // ? Why this is not working?
+  // ? need to debug this
+  //
   &__right::before {
-    content: "";
     position: absolute;
-    right: -25px;
-    width: 30px;
-    height: 150px;
+    content: "";
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 70%;
     border-radius: 5px;
     z-index: -1;
     background-color: $clr-white;
-    box-shadow: 10px 5px 10px 3px rgba($color: $clr-pri-subtle, $alpha: 0.7);
-  }
-
-  &__right::before {
-    left: -25px;
-    width: 30px;
-    box-shadow: -10px 5px 10px 3px rgba($color: $clr-pri-subtle, $alpha: 0.7);
+    box-shadow: 0px 5px 10px 3px rgba($color: $clr-pri-subtle, $alpha: 0.7);
   }
 
   &__user-text {
