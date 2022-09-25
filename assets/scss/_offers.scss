@@ -1,0 +1,160 @@
+.offers {
+  padding-block: 80px;
+  padding-inline: $p-desktop;
+  text-align: center;
+  background-color: $clr-pri-bg-light;
+
+  &__title {
+    @extend .latest__title;
+  }
+
+  &__desc {
+    @include f-body-small;
+    color: $clr-gray-dark;
+    max-width: 500px;
+    margin: 0 auto 50px;
+  }
+
+  &__arrow {
+    position: relative;
+    float: right;
+    top: -70px;
+    font-size: 20px;
+  }
+
+  &__arrow-right {
+    color: $clr-sec-yellow-dark;
+    margin-left: 30px;
+  }
+
+  &__card-container {
+    display: flex;
+    gap: 2%;
+    clear: right;
+
+    .off-card {
+      flex-basis: 32%;
+      background-color: $clr-white;
+      padding: 10px;
+      border-radius: 15px;
+
+      &__img-container {
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      &__img {
+        width: 100%;
+      }
+
+      &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: initial;
+        gap: 20px;
+        padding-inline: 20px;
+      }
+
+      &__title {
+        @include f-heading-5;
+        color: $clr-pri-dark;
+      }
+
+      &__tags-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      &__tag {
+        text-transform: uppercase;
+        @include f-body-small($weight: 600);
+        font-size: 10px;
+        background-color: #f3f4ee;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      &__desc {
+        @include f-body-small;
+        color: $clr-pri-dark;
+      }
+
+      &__author {
+        color: $clr-pri-dark;
+        @include f-heading-6;
+        font-size: 12px;
+      }
+
+      &__cta-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__cta {
+        @extend .yellow-btn;
+        font-size: 12px;
+        padding: 10px 25px;
+        border-radius: 5px;
+      }
+
+      &__price-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      &__current-price {
+        @include f-body-normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: $clr-pri-dark;
+      }
+
+      &__old-price {
+        @include f-body-small;
+        font-weight: bold;
+        color: $clr-gray-light;
+        text-decoration: line-through;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+
+  &__view-more {
+    float: right;
+    @extend .btn;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    display: none;
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .offers {
+    padding-inline: $p-mobile;
+
+    &__arrow {
+      display: none;
+    }
+
+    &__card-container {
+      flex-direction: column;
+      gap: 20px;
+
+      .off-card:nth-last-of-type(1) {
+        display: none;
+      }
+    }
+
+    &__view-more {
+      margin-top: 20px;
+      display: initial;
+    }
+  }
+}
