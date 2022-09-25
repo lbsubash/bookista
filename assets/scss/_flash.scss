@@ -1,0 +1,268 @@
+.flash {
+  position: relative;
+  padding-left: $p-desktop;
+  padding-block: 50px;
+  background-color: $clr-pri-dark;
+  color: $clr-white;
+  display: flex;
+  gap: 1%;
+
+  &__main-container {
+    flex-basis: 25%;
+  }
+
+  &__title {
+    @include f-heading-2;
+    margin-bottom: 20px;
+    i {
+      font-size: 28px;
+      padding-left: 10px;
+      color: $clr-sec-yellow-dark;
+    }
+  }
+
+  &__desc {
+    @include f-body-small;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+
+  &__time {
+    display: flex;
+    border: 1px solid $clr-gray-dark;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+  }
+
+  &__timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &-number {
+      @include f-heading-5;
+    }
+    &-text {
+      @include f-body-small;
+      font-size: 10px;
+    }
+  }
+
+  &__slider {
+    flex-basis: 74%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+
+    & > i {
+      font-size: 20px;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: $clr-pri-bg-light;
+      color: $clr-black;
+    }
+
+    .fl-card {
+      display: flex;
+      padding: 20px;
+      border-radius: 25px;
+      width: fit-content;
+      box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.8);
+      gap: 20px;
+      margin: 0 5px;
+
+      &__left {
+        width: 130px;
+        height: 190px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      &__img {
+        width: 100%;
+        object-fit: cover;
+      }
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        // gap: 10px;
+      }
+
+      &__type-container {
+        display: flex;
+        gap: 5px;
+        @include f-heading-6;
+        font-size: 10px;
+      }
+
+      &__star {
+        color: $clr-sec-yellow-dark;
+      }
+
+      &__title {
+        @include f-body-normal;
+        font-weight: bold;
+      }
+
+      &__author {
+        @include f-body-small;
+        color: $clr-gray-light;
+        font-size: 12px;
+      }
+
+      &__price-container {
+        display: flex;
+        gap: 15px;
+        align-items: baseline;
+      }
+
+      &__current-price {
+        @include f-body-normal;
+        font-weight: bold;
+      }
+      &__old-price {
+        @include f-body-small;
+        text-decoration: line-through;
+        font-size: 10px;
+        color: $clr-gray-light;
+      }
+
+      &__cart-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      &__stock-bar {
+        width: 80%;
+        height: 5px;
+        border-radius: 3px;
+        background-color: $clr-gray-light;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 80%;
+          height: 5px;
+          border-radius: 3px;
+          background-color: $clr-sec-yellow-dark;
+        }
+      }
+      &__cart {
+        background-color: $clr-sec-pink-dark;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+
+      &__book-left {
+        @include f-body-small;
+        font-size: 10px;
+        color: $clr-gray-light;
+        position: relative;
+        top: -17px;
+      }
+    }
+  }
+
+  &__cta,
+  &__overlay {
+    display: none;
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .flash {
+    padding-inline: $p-mobile;
+    flex-direction: column;
+    gap: 30px;
+
+    &__main-container {
+      text-align: center;
+    }
+
+    &__desc {
+      text-align: center;
+    }
+
+    &__time {
+      margin: 50px auto 20px;
+    }
+
+    &__slider {
+      flex-direction: column;
+      padding-inline: 0;
+      gap: 20px;
+
+      & > i {
+        display: none;
+      }
+
+      .fl-card {
+        background-color: $clr-white;
+        color: $clr-pri-dark;
+
+        &__star--null,
+        &__reviews-count {
+          color: $clr-gray-light;
+        }
+
+        &__author {
+          color: $clr-pri-dark;
+        }
+        &__old-price {
+          color: $clr-sec-pink-dark;
+        }
+
+        &__cart {
+          color: $clr-white;
+        }
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      left: 0;
+      top: 75%;
+      display: block;
+      width: 100%;
+      height: 25%;
+      background-image: linear-gradient(
+        to top,
+        rgba(59, 47, 74, 1),
+        rgba(0, 0, 0, 0.1)
+      );
+      backdrop-filter: blur(1px);
+      // * Need to create a soft edge on top (feather effect)
+      //
+    }
+
+    &__cta {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: transparent;
+      @include f-heading-6;
+      font-size: 16px;
+      color: $clr-white;
+      border: 3px solid $clr-white;
+      border-radius: 8px;
+      padding: 10px;
+    }
+  }
+}
