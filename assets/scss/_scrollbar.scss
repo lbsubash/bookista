@@ -1,0 +1,21 @@
+// Scrollbar
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+// ::-webkit-scrollbar-track-piece {
+//   background: $clr-sec-yellow-light;
+// }
+::-webkit-scrollbar-thumb {
+  background: $clr-sec-pink-light;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $clr-sec-pink-dark;
+}
+// ::-webkit-scrollbar-button {
+//   background: $clr-sec-pink-light;
+// }
