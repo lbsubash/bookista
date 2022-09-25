@@ -42,7 +42,7 @@
   margin-block: 20px;
 }
 
-.btn, .yellow-btn, .subscribe__btn {
+.btn, .pink-btn, .latest__cta, .yellow-btn, .subscribe__btn {
   border: none;
   outline: none;
   cursor: pointer;
@@ -50,6 +50,14 @@
 
 .yellow-btn, .subscribe__btn {
   background-color: #eaa451;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.pink-btn, .latest__cta {
+  background-color: #d9176c;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -113,6 +121,141 @@
   }
   .adv-card__title {
     font-size: 14px;
+  }
+}
+.latest {
+  padding-block: 80px;
+  padding-inline: 100px;
+  text-align: center;
+}
+.latest__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.latest__desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #a4a4a4;
+  max-width: 500px;
+  margin: 0 auto 80px;
+}
+.latest__container {
+  display: flex;
+  gap: 1%;
+}
+.latest__cta {
+  font-size: 12px;
+  padding: 15px 20px;
+  border-radius: 3px;
+}
+.latest__cta i {
+  margin-left: 10px;
+}
+
+.lat-card {
+  flex-basis: 24.25%;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.lat-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.lat-card__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.lat-card__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.lat-card__desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}
+.lat-card__continue {
+  color: #d9176c;
+  cursor: pointer;
+  font-weight: bold;
+}
+.lat-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lat-card__author-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.lat-card__author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.lat-card__author {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 12px;
+}
+.lat-card__published {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 10px;
+  color: #a4a4a4;
+}
+.lat-card__arrow {
+  display: none;
+  color: #d9176c;
+  padding: 10px;
+  border: 2px solid #d9176c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .latest {
+    padding-inline: 30px;
+    padding-block: 40px;
+  }
+  .latest__desc {
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .latest__container {
+    flex-direction: column;
+  }
+  .lat-card {
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .lat-card:not(:last-child) {
+    padding-bottom: 30px;
+  }
+  .lat-card__arrow {
+    display: block;
+  }
+  .lat-card__head {
+    flex-direction: row;
+  }
+  .lat-card__img {
+    width: 90px;
+    height: 90px;
   }
 }
 .testimonial {

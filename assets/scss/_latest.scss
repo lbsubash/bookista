@@ -1,0 +1,143 @@
+.latest {
+  padding-block: 80px;
+  padding-inline: $p-desktop;
+  text-align: center;
+
+  &__title {
+    @include f-heading-3;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    @include f-body-small;
+    color: $clr-gray-dark;
+    max-width: 500px;
+    margin: 0 auto 80px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 1%;
+  }
+
+  &__cta {
+    @extend .pink-btn;
+    font-size: 12px;
+    padding: 15px 20px;
+    border-radius: 3px;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+}
+
+.lat-card {
+  flex-basis: 24.25%;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 50px;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &__title {
+    @include f-heading-6;
+  }
+
+  &__desc {
+    @include f-body-small;
+    color: $clr-gray-dark;
+    margin-bottom: 20px;
+  }
+
+  &__continue {
+    color: $clr-sec-pink-dark;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__author-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__author {
+    @include f-heading-6;
+    font-size: 12px;
+  }
+
+  &__published {
+    @include f-body-small;
+    font-size: 10px;
+    color: $clr-gray-dark;
+  }
+
+  &__arrow {
+    display: none;
+    color: $clr-sec-pink-dark;
+    padding: 10px;
+    border: 2px solid $clr-sec-pink-dark;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $br-mobile) {
+  .latest {
+    padding-inline: $p-mobile;
+    padding-block: 40px;
+
+    &__desc {
+      margin-bottom: 10px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $clr-gray-light;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+  }
+
+  .lat-card {
+    border-bottom: 1px solid $clr-gray-light;
+    &:not(:last-child) {
+      padding-bottom: 30px;
+    }
+
+    &__arrow {
+      display: block;
+    }
+    &__head {
+      flex-direction: row;
+    }
+    &__img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}

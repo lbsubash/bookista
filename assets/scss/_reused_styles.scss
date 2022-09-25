@@ -45,3 +45,10 @@
   color: $clr-white;
   @include f-heading-6;
 }
+
+.pink-btn {
+  @extend .btn;
+  background-color: $clr-sec-pink-dark;
+  color: $clr-white;
+  @include f-heading-6;
+}
